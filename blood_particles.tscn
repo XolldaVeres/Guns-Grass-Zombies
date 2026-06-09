@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://srjpxnq6xnj0"]
+
+[ext_resource type="Texture2D" uid="uid://6c3fds00s8yu" path="res://asset/PNG/Retina/barrelRed_side.png" id="1_tnyvy"]
+[ext_resource type="Script" uid="uid://cv1fowcmbo0ip" path="res://blood_particles.gd" id="2_iv104"]
+
+[node name="BloodParticles" type="CPUParticles2D" unique_id=812011654]
+amount = 15
+texture = ExtResource("1_tnyvy")
+lifetime = 0.3
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+color = Color(0.94509804, 0, 0.0627451, 1)
+script = ExtResource("2_iv104")

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dux2vli73403"]
+
+[ext_resource type="Script" uid="uid://cy7lmnhumbxvd" path="res://magic_spell.gd" id="1_p48s8"]
+[ext_resource type="Texture2D" uid="uid://dhxwl4gkgyes7" path="res://asset/PNG/Default size/explosion3.png" id="2_p48s8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p48s8"]
+radius = 20.0
+height = 66.0
+
+[node name="MagicSpell" type="Area2D" unique_id=791384805]
+script = ExtResource("1_p48s8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1844395252]
+position = Vector2(23.395685, 16.890297)
+rotation = 1.5707964
+scale = Vector2(0.5826714, 0.76761127)
+texture = ExtResource("2_p48s8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=636659239]
+position = Vector2(24, 16)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_p48s8")

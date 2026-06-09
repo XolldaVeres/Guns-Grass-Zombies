@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b2arosi5bw5"]
+
+[ext_resource type="Script" uid="uid://bg2aredwvxghl" path="res://boss.gd" id="1_6xxrv"]
+[ext_resource type="Texture2D" uid="uid://dcew1uwq82hk1" path="res://asset/PNGplayter/Zombie 1/zoimbie1_hold.png" id="2_skx2t"]
+[ext_resource type="AudioStream" uid="uid://3n5avlvkj8y4" path="res://asset/music/bosscast.wav" id="3_lnbgr"]
+[ext_resource type="AudioStream" uid="uid://bb2e2f3xqfjef" path="res://asset/music/bosshit.wav" id="4_o1i15"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jmu02"]
+radius = 46.010868
+
+[node name="Boss" type="CharacterBody2D" unique_id=1270301887]
+collision_layer = 5
+script = ExtResource("1_6xxrv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1962823560]
+modulate = Color(0.90588236, 0, 0.003921569, 1)
+scale = Vector2(2, 1.96)
+texture = ExtResource("2_skx2t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1520803759]
+shape = SubResource("CircleShape2D_jmu02")
+
+[node name="CastSound" type="AudioStreamPlayer2D" parent="." unique_id=1956093669]
+stream = ExtResource("3_lnbgr")
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="." unique_id=20204443]
+stream = ExtResource("4_o1i15")

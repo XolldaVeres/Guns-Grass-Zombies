@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://dya8804qwkpy5"]
+
+[ext_resource type="Script" uid="uid://ugo8dxgmq8ww" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://bbeojt11feim6" path="res://asset/bg/d43a0163598711f187a04a124d184011.jpg" id="2_7vrkn"]
+[ext_resource type="FontFile" uid="uid://d05vw14is30t0" path="res://asset/fonts/PressStart2P-Regular.ttf" id="3_fu7sn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7vrkn"]
+
+[node name="MainMenu" type="Control" unique_id=1049121596]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+metadata/_edit_vertical_guides_ = [940.0]
+
+[node name="Control" type="Control" parent="." unique_id=1807679209]
+anchors_preset = 0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+
+[node name="Background" type="TextureRect" parent="Control" unique_id=469338207]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=352562472]
+position = Vector2(0.00014841557, 3.182888e-05)
+scale = Vector2(0.9523809, 0.9375001)
+texture = ExtResource("2_7vrkn")
+
+[node name="PlayButton" type="Button" parent="." unique_id=630273984]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -328.0
+offset_top = -155.0
+offset_right = 329.0
+offset_bottom = -66.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.7977378, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.52588415, 0.06230536, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.2, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("3_fu7sn")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7vrkn")
+text = "Выживание"
+
+[node name="ClearButton" type="Button" parent="." unique_id=419282499]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -44.5
+offset_right = 320.0
+offset_bottom = 44.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.7977378, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.52588415, 0.06230536, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.2, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("3_fu7sn")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7vrkn")
+text = "Зачистка"
+
+[node name="EndlessButton" type="Button" parent="." unique_id=1613954430]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -542.0
+offset_top = 57.0
+offset_right = 543.0
+offset_bottom = 146.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.7977378, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.52588415, 0.06230536, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.2, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("3_fu7sn")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7vrkn")
+text = "Бесконечная арена"
+
+[node name="QuitButton" type="Button" parent="." unique_id=928964091]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -542.0
+offset_top = 182.0
+offset_right = 543.0
+offset_bottom = 271.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.7977378, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.52588415, 0.06230536, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.2, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("3_fu7sn")
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7vrkn")
+text = "Выход"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="ClearButton" to="." method="_on_clear_button_pressed"]
+[connection signal="pressed" from="EndlessButton" to="." method="_on_endless_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

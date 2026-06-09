@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c432umyj2f0lv"]
+
+[ext_resource type="Texture2D" uid="uid://ck26ad8oaebs5" path="res://asset/PNG/Default size/crateWood_side.png" id="1_nwo05"]
+[ext_resource type="Script" uid="uid://bqeaesswwv3ux" path="res://ammo_box.gd" id="1_xmxkj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xmxkj"]
+radius = 15.0
+
+[node name="AmmoBox" type="Area2D" unique_id=600303129]
+script = ExtResource("1_xmxkj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1501777190]
+texture = ExtResource("1_nwo05")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1048879728]
+shape = SubResource("CircleShape2D_xmxkj")

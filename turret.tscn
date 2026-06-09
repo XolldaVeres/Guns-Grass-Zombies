@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dq6puwk835ipd"]
+
+[ext_resource type="Script" uid="uid://b8xhun1l7247m" path="res://turret.gd" id="1_tjdg3"]
+[ext_resource type="Texture2D" uid="uid://d52x5k7x5bwr" path="res://asset/PNG/Default size/tank_huge.png" id="2_c5apd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_coqkk"]
+radius = 41.109608
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tjdg3"]
+radius = 397.1813
+
+[node name="Turret" type="StaticBody2D" unique_id=551067686]
+script = ExtResource("1_tjdg3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=24870511]
+shape = SubResource("CircleShape2D_coqkk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=468637843]
+scale = Vector2(1, 0.949)
+texture = ExtResource("2_c5apd")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1615063223]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=130953213]
+shape = SubResource("CircleShape2D_tjdg3")

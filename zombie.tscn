@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://banwuxruh4160"]
+
+[ext_resource type="Script" uid="uid://cc340c8rnf4pe" path="res://zombie.gd" id="1_uiaus"]
+[ext_resource type="Texture2D" uid="uid://dcew1uwq82hk1" path="res://asset/PNGplayter/Zombie 1/zoimbie1_hold.png" id="2_roy8y"]
+[ext_resource type="AudioStream" uid="uid://b7aouesk2ulsc" path="res://asset/music/555421__tonsil5__zombie-pain-4.wav" id="3_jmu02"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jmu02"]
+radius = 23.021729
+
+[node name="Zombie" type="CharacterBody2D" unique_id=1270301887]
+collision_layer = 5
+script = ExtResource("1_uiaus")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1962823560]
+texture = ExtResource("2_roy8y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1520803759]
+shape = SubResource("CircleShape2D_jmu02")
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="." unique_id=139159733]
+stream = ExtResource("3_jmu02")

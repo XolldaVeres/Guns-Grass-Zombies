@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://yc5t3vp1pj10"]
+
+[ext_resource type="Script" uid="uid://ddukuljda3nak" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://dopqy6psxvpen" path="res://asset/player_skins/player_pistol.png" id="2_2hs0m"]
+[ext_resource type="Script" uid="uid://0sfj2x5ueeck" path="res://camera_2d.gd" id="3_2hs0m"]
+[ext_resource type="AudioStream" uid="uid://bugt88seu3lp5" path="res://asset/music/PISOTET.wav" id="3_sweqy"]
+[ext_resource type="AudioStream" uid="uid://c8ywkx4bhr2u4" path="res://asset/music/data_pion-st3-footstep-sfx-323056.mp3" id="5_ivps1"]
+[ext_resource type="AudioStream" uid="uid://dumgjv8stx5bp" path="res://asset/music/pistoletzaradka.mp3" id="5_sweqy"]
+[ext_resource type="Texture2D" uid="uid://cje64eflkuexf" path="res://asset/Black/crosshair134.png" id="7_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://bhkriicgrhuon" path="res://asset/PNG (Transparent)/muzzle_01.png" id="8_dw050"]
+[ext_resource type="Texture2D" uid="uid://kcucreg57sv7" path="res://asset/PNG (Transparent)/muzzle_02.png" id="9_ivps1"]
+[ext_resource type="Texture2D" uid="uid://ds2udspnx0ap4" path="res://asset/PNG (Transparent)/muzzle_03.png" id="10_urp6f"]
+[ext_resource type="Texture2D" uid="uid://p3whj64x25at" path="res://asset/PNG (Transparent)/muzzle_04.png" id="11_bwjto"]
+[ext_resource type="Texture2D" uid="uid://21b17ok18v1v" path="res://asset/PNG (Transparent)/muzzle_05.png" id="12_606se"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
+radius = 22.022715
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_op7ga"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_dw050")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ivps1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_urp6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bwjto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_606se")
+}],
+"loop": false,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=424660012]
+script = ExtResource("1_onrkg")
+
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1904063129]
+position = Vector2(7.9999995, 0)
+scale = Vector2(1, 0.957)
+texture = ExtResource("2_2hs0m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1695948745]
+shape = SubResource("CircleShape2D_onrkg")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1880172488]
+script = ExtResource("3_2hs0m")
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="." unique_id=1999030979]
+stream = ExtResource("3_sweqy")
+
+[node name="FootstepSound" type="AudioStreamPlayer2D" parent="." unique_id=166609390]
+stream = ExtResource("5_ivps1")
+
+[node name="ReloadSound" type="AudioStreamPlayer2D" parent="." unique_id=463602027]
+stream = ExtResource("5_sweqy")
+
+[node name="Crosshair" type="Sprite2D" parent="." unique_id=1612247563]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_1jxqw")
+
+[node name="MuzzleFlash" type="AnimatedSprite2D" parent="." unique_id=1936846499]
+modulate = Color(0.9776916, 0, 0.3671535, 1)
+position = Vector2(67, 2.4868966e-13)
+rotation = 1.5707964
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_op7ga")
+frame = 4
+frame_progress = 1.0
+speed_scale = 0.5

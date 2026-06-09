@@ -1,0 +1,691 @@
+[gd_scene format=3 uid="uid://odlmfar1unxl"]
+
+[ext_resource type="Script" uid="uid://28u4bfvpxqei" path="res://survival.gd" id="1_xb206"]
+[ext_resource type="Texture2D" uid="uid://bugx1cr1y3lq4" path="res://asset/PNG/Default size/tileGrass2.png" id="2_bs02r"]
+[ext_resource type="Texture2D" uid="uid://cm25t53e5r376" path="res://asset/PNGplayter/Tiles/tile_05.png" id="3_ac4mc"]
+[ext_resource type="PackedScene" uid="uid://yc5t3vp1pj10" path="res://player.tscn" id="3_lbues"]
+[ext_resource type="FontFile" uid="uid://d05vw14is30t0" path="res://asset/fonts/PressStart2P-Regular.ttf" id="4_bs02r"]
+[ext_resource type="FontFile" uid="uid://bdrgn2gnup7dg" path="res://my_font_theme.tres" id="4_lbues"]
+[ext_resource type="Texture2D" uid="uid://b62b17vp3ephw" path="res://asset/PNG/Default size/crateMetal.png" id="4_oxu42"]
+[ext_resource type="Texture2D" uid="uid://ctafj0nraehh" path="res://asset/PNG/Default size/crateWood.png" id="5_4dr2m"]
+[ext_resource type="Texture2D" uid="uid://c8m56n8acsvdc" path="res://asset/PNG/Default size/barrelRust_top.png" id="6_6kgpb"]
+[ext_resource type="Texture2D" uid="uid://bbeva4mv6a2sp" path="res://asset/PNG/Default size/barrelBlack_top.png" id="7_dsxya"]
+[ext_resource type="Texture2D" uid="uid://boilis33nudjw" path="res://asset/PNG/Default size/barrelGreen_top.png" id="8_si8y1"]
+[ext_resource type="Texture2D" uid="uid://bqql664jgsu07" path="res://asset/PNGplayter/Tiles/tile_19.png" id="9_vucxa"]
+[ext_resource type="Texture2D" uid="uid://dfkdcc48agt1o" path="res://asset/PNGplayter/Tiles/tile_156.png" id="10_psnpp"]
+[ext_resource type="Texture2D" uid="uid://31cxm0rqdq6g" path="res://asset/PNGplayter/Tiles/tile_157.png" id="11_34rfb"]
+[ext_resource type="Texture2D" uid="uid://cya3eg27mdhb6" path="res://asset/PNGplayter/Tiles/tile_183.png" id="12_aqwp2"]
+[ext_resource type="Texture2D" uid="uid://bxqhh5hpn3duw" path="res://asset/PNGplayter/Tiles/tile_213.png" id="13_0lgiw"]
+[ext_resource type="Texture2D" uid="uid://g4gycgretpvn" path="res://asset/PNGplayter/Tiles/tile_508.png" id="14_ea4l2"]
+[ext_resource type="Texture2D" uid="uid://cskm3tnhgb4g" path="res://asset/PNGplayter/Tiles/tile_368.png" id="15_3324h"]
+[ext_resource type="AudioStream" uid="uid://cyjx0475s846k" path="res://asset/music/background/mondamusic-retro-arcade-game-music-512837.mp3" id="19_ac4mc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ac4mc"]
+size = Vector2(830.5, 34.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxu42"]
+size = Vector2(880.25, 34.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dr2m"]
+size = Vector2(913, 34.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kgpb"]
+size = Vector2(631.5, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsxya"]
+size = Vector2(731.5, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_si8y1"]
+size = Vector2(721.75, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vucxa"]
+size = Vector2(1094.25, 34.5)
+
+[node name="survival" type="Node2D" unique_id=200285986]
+script = ExtResource("1_xb206")
+
+[node name="Background" type="Node2D" parent="." unique_id=1930087207]
+
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=946265770]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1010.0
+offset_top = -774.5
+offset_right = 1010.0
+offset_bottom = 774.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bs02r")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Environment" type="Node2D" parent="Background" unique_id=723625123]
+y_sort_enabled = true
+
+[node name="Tile05" type="Sprite2D" parent="Background/Environment" unique_id=266962675]
+position = Vector2(-641, 389.00003)
+scale = Vector2(11.5, 12.0625)
+texture = ExtResource("3_ac4mc")
+
+[node name="CrateMetal" type="Sprite2D" parent="Background/Environment" unique_id=993132561]
+position = Vector2(-864, 475)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateWood" type="Sprite2D" parent="Background/Environment" unique_id=716255655]
+position = Vector2(-839, 517)
+texture = ExtResource("5_4dr2m")
+
+[node name="CrateWood2" type="Sprite2D" parent="Background/Environment" unique_id=1948806131]
+position = Vector2(-925, 523)
+texture = ExtResource("5_4dr2m")
+
+[node name="CrateMetal2" type="Sprite2D" parent="Background/Environment" unique_id=1828255882]
+position = Vector2(-952, 419)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateMetal3" type="Sprite2D" parent="Background/Environment" unique_id=1282495544]
+position = Vector2(-860, 335)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateMetal4" type="Sprite2D" parent="Background/Environment" unique_id=804546904]
+position = Vector2(-977, 242)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateMetal5" type="Sprite2D" parent="Background/Environment" unique_id=1747483910]
+position = Vector2(-763, 533)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateWood3" type="Sprite2D" parent="Background/Environment" unique_id=381051251]
+position = Vector2(-942, 619)
+texture = ExtResource("5_4dr2m")
+
+[node name="CrateWood4" type="Sprite2D" parent="Background/Environment" unique_id=382250372]
+position = Vector2(-794, 594)
+texture = ExtResource("5_4dr2m")
+
+[node name="BarrelRustTop" type="Sprite2D" parent="Background/Environment" unique_id=2144367465]
+position = Vector2(-968, 347)
+texture = ExtResource("6_6kgpb")
+
+[node name="BarrelRustTop2" type="Sprite2D" parent="Background/Environment" unique_id=1512084944]
+position = Vector2(-732, 403)
+texture = ExtResource("6_6kgpb")
+
+[node name="BarrelBlackTop" type="Sprite2D" parent="Background/Environment" unique_id=1795192690]
+position = Vector2(-718, 501)
+texture = ExtResource("7_dsxya")
+
+[node name="BarrelBlackTop2" type="Sprite2D" parent="Background/Environment" unique_id=2080019323]
+position = Vector2(-876, 258)
+texture = ExtResource("7_dsxya")
+
+[node name="BarrelGreenTop" type="Sprite2D" parent="Background/Environment" unique_id=605551869]
+position = Vector2(-836, 414)
+texture = ExtResource("8_si8y1")
+
+[node name="CrateMetal6" type="Sprite2D" parent="Background/Environment" unique_id=229371958]
+position = Vector2(808, 555)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateWood5" type="Sprite2D" parent="Background/Environment" unique_id=2020071291]
+position = Vector2(833, 597)
+texture = ExtResource("5_4dr2m")
+
+[node name="CrateWood6" type="Sprite2D" parent="Background/Environment" unique_id=796237049]
+position = Vector2(747, 603)
+texture = ExtResource("5_4dr2m")
+
+[node name="CrateMetal7" type="Sprite2D" parent="Background/Environment" unique_id=979003372]
+position = Vector2(720, 499)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateMetal8" type="Sprite2D" parent="Background/Environment" unique_id=808761448]
+position = Vector2(812, 415)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateMetal9" type="Sprite2D" parent="Background/Environment" unique_id=1351834935]
+position = Vector2(695, 322)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateMetal10" type="Sprite2D" parent="Background/Environment" unique_id=1229543879]
+position = Vector2(909, 613)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateWood7" type="Sprite2D" parent="Background/Environment" unique_id=1297883117]
+position = Vector2(730, 699)
+texture = ExtResource("5_4dr2m")
+
+[node name="CrateWood8" type="Sprite2D" parent="Background/Environment" unique_id=1369661248]
+position = Vector2(878, 674)
+texture = ExtResource("5_4dr2m")
+
+[node name="BarrelRustTop3" type="Sprite2D" parent="Background/Environment" unique_id=955679950]
+position = Vector2(704, 427)
+texture = ExtResource("6_6kgpb")
+
+[node name="BarrelRustTop4" type="Sprite2D" parent="Background/Environment" unique_id=1345151987]
+position = Vector2(940, 483)
+texture = ExtResource("6_6kgpb")
+
+[node name="BarrelBlackTop3" type="Sprite2D" parent="Background/Environment" unique_id=457916003]
+position = Vector2(954, 581)
+texture = ExtResource("7_dsxya")
+
+[node name="BarrelBlackTop4" type="Sprite2D" parent="Background/Environment" unique_id=1449868379]
+position = Vector2(796, 338)
+texture = ExtResource("7_dsxya")
+
+[node name="BarrelGreenTop2" type="Sprite2D" parent="Background/Environment" unique_id=2116008250]
+position = Vector2(836, 494)
+texture = ExtResource("8_si8y1")
+
+[node name="CrateMetal11" type="Sprite2D" parent="Background/Environment" unique_id=659558981]
+position = Vector2(-861, -472)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateWood9" type="Sprite2D" parent="Background/Environment" unique_id=836805111]
+position = Vector2(-836, -430)
+texture = ExtResource("5_4dr2m")
+
+[node name="CrateWood10" type="Sprite2D" parent="Background/Environment" unique_id=514542682]
+position = Vector2(-922, -424)
+texture = ExtResource("5_4dr2m")
+
+[node name="CrateMetal12" type="Sprite2D" parent="Background/Environment" unique_id=1768259915]
+position = Vector2(-949, -528)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateMetal13" type="Sprite2D" parent="Background/Environment" unique_id=1555175959]
+position = Vector2(-857, -612)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateMetal14" type="Sprite2D" parent="Background/Environment" unique_id=1192305748]
+position = Vector2(-938, -711)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateMetal15" type="Sprite2D" parent="Background/Environment" unique_id=1596765642]
+position = Vector2(-760, -414)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateWood11" type="Sprite2D" parent="Background/Environment" unique_id=357309536]
+position = Vector2(-939, -328)
+texture = ExtResource("5_4dr2m")
+
+[node name="CrateWood12" type="Sprite2D" parent="Background/Environment" unique_id=157156376]
+position = Vector2(-791, -353)
+texture = ExtResource("5_4dr2m")
+
+[node name="BarrelRustTop5" type="Sprite2D" parent="Background/Environment" unique_id=106141518]
+position = Vector2(-938, -603)
+texture = ExtResource("6_6kgpb")
+
+[node name="BarrelRustTop6" type="Sprite2D" parent="Background/Environment" unique_id=596273291]
+position = Vector2(-729, -544)
+texture = ExtResource("6_6kgpb")
+
+[node name="BarrelBlackTop5" type="Sprite2D" parent="Background/Environment" unique_id=1862859081]
+position = Vector2(-715, -446)
+texture = ExtResource("7_dsxya")
+
+[node name="BarrelBlackTop6" type="Sprite2D" parent="Background/Environment" unique_id=1794386256]
+position = Vector2(-873, -689)
+texture = ExtResource("7_dsxya")
+
+[node name="BarrelGreenTop3" type="Sprite2D" parent="Background/Environment" unique_id=2017525384]
+position = Vector2(-833, -533)
+texture = ExtResource("8_si8y1")
+
+[node name="CrateMetal16" type="Sprite2D" parent="Background/Environment" unique_id=242374378]
+position = Vector2(827, -498)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateWood13" type="Sprite2D" parent="Background/Environment" unique_id=1049073446]
+position = Vector2(852, -456)
+texture = ExtResource("5_4dr2m")
+
+[node name="CrateWood14" type="Sprite2D" parent="Background/Environment" unique_id=1266258686]
+position = Vector2(766, -450)
+texture = ExtResource("5_4dr2m")
+
+[node name="CrateMetal17" type="Sprite2D" parent="Background/Environment" unique_id=1894970950]
+position = Vector2(739, -554)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateMetal18" type="Sprite2D" parent="Background/Environment" unique_id=1936613482]
+position = Vector2(831, -638)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateMetal19" type="Sprite2D" parent="Background/Environment" unique_id=680390404]
+position = Vector2(714, -731)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateMetal20" type="Sprite2D" parent="Background/Environment" unique_id=1524668124]
+position = Vector2(928, -440)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateWood15" type="Sprite2D" parent="Background/Environment" unique_id=2002800420]
+position = Vector2(749, -354)
+texture = ExtResource("5_4dr2m")
+
+[node name="CrateWood16" type="Sprite2D" parent="Background/Environment" unique_id=1392109421]
+position = Vector2(897, -379)
+texture = ExtResource("5_4dr2m")
+
+[node name="BarrelRustTop7" type="Sprite2D" parent="Background/Environment" unique_id=543926614]
+position = Vector2(723, -626)
+texture = ExtResource("6_6kgpb")
+
+[node name="BarrelRustTop8" type="Sprite2D" parent="Background/Environment" unique_id=562712066]
+position = Vector2(959, -570)
+texture = ExtResource("6_6kgpb")
+
+[node name="BarrelBlackTop7" type="Sprite2D" parent="Background/Environment" unique_id=820861235]
+position = Vector2(973, -472)
+texture = ExtResource("7_dsxya")
+
+[node name="BarrelBlackTop8" type="Sprite2D" parent="Background/Environment" unique_id=560572984]
+position = Vector2(815, -715)
+texture = ExtResource("7_dsxya")
+
+[node name="BarrelGreenTop4" type="Sprite2D" parent="Background/Environment" unique_id=692110540]
+position = Vector2(855, -559)
+texture = ExtResource("8_si8y1")
+
+[node name="CrateMetal21" type="Sprite2D" parent="Background/Environment" unique_id=1214356366]
+position = Vector2(-540, 314)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateWood17" type="Sprite2D" parent="Background/Environment" unique_id=1186507673]
+position = Vector2(-515, 356)
+texture = ExtResource("5_4dr2m")
+
+[node name="CrateWood18" type="Sprite2D" parent="Background/Environment" unique_id=651204063]
+position = Vector2(-601, 362)
+texture = ExtResource("5_4dr2m")
+
+[node name="CrateMetal22" type="Sprite2D" parent="Background/Environment" unique_id=790811979]
+position = Vector2(-628, 258)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateMetal23" type="Sprite2D" parent="Background/Environment" unique_id=1237485351]
+position = Vector2(-536, 174)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateMetal24" type="Sprite2D" parent="Background/Environment" unique_id=1824584227]
+position = Vector2(-653, 81)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateMetal25" type="Sprite2D" parent="Background/Environment" unique_id=515664797]
+position = Vector2(-439, 372)
+texture = ExtResource("4_oxu42")
+
+[node name="CrateWood19" type="Sprite2D" parent="Background/Environment" unique_id=1299015207]
+position = Vector2(-618, 458)
+texture = ExtResource("5_4dr2m")
+
+[node name="CrateWood20" type="Sprite2D" parent="Background/Environment" unique_id=1900680513]
+position = Vector2(-470, 433)
+texture = ExtResource("5_4dr2m")
+
+[node name="BarrelRustTop9" type="Sprite2D" parent="Background/Environment" unique_id=985622684]
+position = Vector2(-644, 186)
+texture = ExtResource("6_6kgpb")
+
+[node name="BarrelRustTop10" type="Sprite2D" parent="Background/Environment" unique_id=1418643976]
+position = Vector2(-408, 242)
+texture = ExtResource("6_6kgpb")
+
+[node name="BarrelBlackTop9" type="Sprite2D" parent="Background/Environment" unique_id=129325236]
+position = Vector2(-394, 340)
+texture = ExtResource("7_dsxya")
+
+[node name="BarrelBlackTop10" type="Sprite2D" parent="Background/Environment" unique_id=1966164840]
+position = Vector2(-552, 97)
+texture = ExtResource("7_dsxya")
+
+[node name="BarrelGreenTop5" type="Sprite2D" parent="Background/Environment" unique_id=1176064997]
+position = Vector2(-512, 253)
+texture = ExtResource("8_si8y1")
+
+[node name="Tile19" type="Sprite2D" parent="Background/Environment" unique_id=1046802242]
+position = Vector2(-81, 581.5)
+scale = Vector2(6, 6.0468745)
+texture = ExtResource("9_vucxa")
+
+[node name="Tile156" type="Sprite2D" parent="Background/Environment" unique_id=162947376]
+position = Vector2(430, 624)
+texture = ExtResource("10_psnpp")
+
+[node name="Tile157" type="Sprite2D" parent="Background/Environment" unique_id=1714032483]
+position = Vector2(330, 589)
+texture = ExtResource("10_psnpp")
+
+[node name="Tile158" type="Sprite2D" parent="Background/Environment" unique_id=2351627]
+position = Vector2(378, 507)
+texture = ExtResource("10_psnpp")
+
+[node name="Tile159" type="Sprite2D" parent="Background/Environment" unique_id=680257354]
+position = Vector2(427, 565)
+texture = ExtResource("11_34rfb")
+
+[node name="Tile160" type="Sprite2D" parent="Background/Environment" unique_id=462651192]
+position = Vector2(261, 519)
+texture = ExtResource("11_34rfb")
+
+[node name="Tile183" type="Sprite2D" parent="Background/Environment" unique_id=1971628825]
+position = Vector2(230, 380)
+scale = Vector2(2, 2)
+texture = ExtResource("12_aqwp2")
+
+[node name="Tile184" type="Sprite2D" parent="Background/Environment" unique_id=2116019034]
+position = Vector2(-139, 111)
+texture = ExtResource("12_aqwp2")
+
+[node name="Tile185" type="Sprite2D" parent="Background/Environment" unique_id=2010749767]
+position = Vector2(-658, -130)
+texture = ExtResource("12_aqwp2")
+
+[node name="Tile186" type="Sprite2D" parent="Background/Environment" unique_id=315856824]
+position = Vector2(-389, -413)
+texture = ExtResource("12_aqwp2")
+
+[node name="Tile187" type="Sprite2D" parent="Background/Environment" unique_id=1567639149]
+position = Vector2(523, 61)
+texture = ExtResource("12_aqwp2")
+
+[node name="Tile188" type="Sprite2D" parent="Background/Environment" unique_id=43022408]
+position = Vector2(266, -296)
+scale = Vector2(2, 2)
+texture = ExtResource("12_aqwp2")
+
+[node name="Tile189" type="Sprite2D" parent="Background/Environment" unique_id=1779239155]
+position = Vector2(350, -591)
+texture = ExtResource("12_aqwp2")
+
+[node name="Tile190" type="Sprite2D" parent="Background/Environment" unique_id=1012831498]
+position = Vector2(805, -189)
+texture = ExtResource("12_aqwp2")
+
+[node name="Tile191" type="Sprite2D" parent="Background/Environment" unique_id=231748900]
+position = Vector2(522, 228)
+scale = Vector2(2, 2)
+texture = ExtResource("12_aqwp2")
+
+[node name="Tile192" type="Sprite2D" parent="Background/Environment" unique_id=1760513251]
+position = Vector2(-193, -252)
+texture = ExtResource("12_aqwp2")
+
+[node name="Tile193" type="Sprite2D" parent="Background/Environment" unique_id=219784580]
+position = Vector2(-623, -556)
+scale = Vector2(2, 2)
+texture = ExtResource("12_aqwp2")
+
+[node name="Tile213" type="Sprite2D" parent="Background/Environment" unique_id=521220568]
+position = Vector2(-374, -132)
+texture = ExtResource("13_0lgiw")
+
+[node name="Tile214" type="Sprite2D" parent="Background/Environment" unique_id=2136149212]
+position = Vector2(-445, -237)
+texture = ExtResource("13_0lgiw")
+
+[node name="Tile215" type="Sprite2D" parent="Background/Environment" unique_id=846758665]
+position = Vector2(65, -192)
+texture = ExtResource("13_0lgiw")
+
+[node name="Tile216" type="Sprite2D" parent="Background/Environment" unique_id=2053434071]
+position = Vector2(149, 171)
+texture = ExtResource("13_0lgiw")
+
+[node name="Tile217" type="Sprite2D" parent="Background/Environment" unique_id=1000761834]
+position = Vector2(296, -68)
+texture = ExtResource("13_0lgiw")
+
+[node name="Tile218" type="Sprite2D" parent="Background/Environment" unique_id=1236835062]
+position = Vector2(-203, -461)
+texture = ExtResource("13_0lgiw")
+
+[node name="Tile219" type="Sprite2D" parent="Background/Environment" unique_id=1730715725]
+position = Vector2(629, -232)
+texture = ExtResource("13_0lgiw")
+
+[node name="Tile220" type="Sprite2D" parent="Background/Environment" unique_id=2075905891]
+position = Vector2(400, -382)
+texture = ExtResource("13_0lgiw")
+
+[node name="Tile508" type="Sprite2D" parent="Background/Environment" unique_id=251376961]
+position = Vector2(-991, -388.39313)
+rotation = 1.5707964
+scale = Vector2(12.040325, 1)
+texture = ExtResource("14_ea4l2")
+
+[node name="Tile509" type="Sprite2D" parent="Background/Environment" unique_id=2062859550]
+position = Vector2(993.9999, 413.40518)
+rotation = 1.5707964
+scale = Vector2(11.322993, 1)
+texture = ExtResource("14_ea4l2")
+
+[node name="Tile510" type="Sprite2D" parent="Background/Environment" unique_id=554942346]
+position = Vector2(554, -756)
+rotation = -3.1415925
+scale = Vector2(14.447201, 1)
+texture = ExtResource("14_ea4l2")
+
+[node name="Tile511" type="Sprite2D" parent="Background/Environment" unique_id=483655008]
+position = Vector2(-555, -755)
+rotation = -3.1415925
+scale = Vector2(14.339312, 1)
+texture = ExtResource("14_ea4l2")
+
+[node name="Tile512" type="Sprite2D" parent="Background/Environment" unique_id=871324321]
+position = Vector2(994, -408)
+rotation = 1.5707964
+scale = Vector2(11.322993, 1)
+texture = ExtResource("14_ea4l2")
+
+[node name="Tile513" type="Sprite2D" parent="Background/Environment" unique_id=1303473062]
+position = Vector2(-991, 454)
+rotation = 1.5707964
+scale = Vector2(9.8559065, 1)
+texture = ExtResource("14_ea4l2")
+
+[node name="Tile514" type="Sprite2D" parent="Background/Environment" unique_id=1862463759]
+position = Vector2(616, 757)
+rotation = -3.1415925
+scale = Vector2(12.505299, 1)
+texture = ExtResource("14_ea4l2")
+
+[node name="Tile368" type="Sprite2D" parent="Background/Environment" unique_id=1980698880]
+position = Vector2(1068, 1)
+texture = ExtResource("15_3324h")
+
+[node name="Tile369" type="Sprite2D" parent="Background/Environment" unique_id=553159319]
+position = Vector2(-16, -928)
+texture = ExtResource("15_3324h")
+
+[node name="Tile370" type="Sprite2D" parent="Background/Environment" unique_id=1144641217]
+position = Vector2(-1080, 63)
+texture = ExtResource("15_3324h")
+
+[node name="Tile371" type="Sprite2D" parent="Background/Environment" unique_id=578083789]
+position = Vector2(148, 823)
+texture = ExtResource("15_3324h")
+
+[node name="Player" parent="." unique_id=424660012 instance=ExtResource("3_lbues")]
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=132567526]
+
+[node name="Marker2D" type="Marker2D" parent="SpawnPoints" unique_id=642636871]
+position = Vector2(1063, 1)
+
+[node name="Marker2D2" type="Marker2D" parent="SpawnPoints" unique_id=633972031]
+position = Vector2(139, 832)
+
+[node name="Marker2D3" type="Marker2D" parent="SpawnPoints" unique_id=710393520]
+position = Vector2(-20, -910)
+
+[node name="Marker2D4" type="Marker2D" parent="SpawnPoints" unique_id=1763253841]
+position = Vector2(-1081, 62)
+
+[node name="Timer" type="Timer" parent="." unique_id=807287663]
+wait_time = 2.0
+autostart = true
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=485967164]
+
+[node name="GameOverLabel" type="Label" parent="UI" unique_id=1469442724]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -302.0
+offset_top = -79.0
+offset_right = 303.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.79607844, 0, 1)
+theme_override_fonts/font = ExtResource("4_lbues")
+theme_override_font_sizes/font_size = 55
+text = "ВЫ ПОГИБЛИ!"
+
+[node name="MenuButton" type="Button" parent="UI/GameOverLabel" unique_id=1841580737]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = 27.0
+offset_right = 208.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.79607844, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.5254902, 0.0627451, 0, 1)
+theme_override_colors/font_hover_color = Color(0.5254902, 0.0627451, 0, 1)
+theme_override_fonts/font = ExtResource("4_bs02r")
+theme_override_font_sizes/font_size = 45
+text = "В ГЛАВНОЕ МЕНЮ"
+
+[node name="AmmoLabel" type="Label" parent="UI" unique_id=1024779918]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="HealthLabel" type="Label" parent="UI" unique_id=1968319133]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -23.0
+offset_right = 41.0
+grow_vertical = 0
+
+[node name="WaveLabel" type="Label" parent="UI" unique_id=1163678165]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -52.0
+offset_top = 29.0
+offset_right = -12.0
+offset_bottom = 52.0
+grow_horizontal = 0
+
+[node name="ZombieKillsLabel" type="Label" parent="UI" unique_id=237920233]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -51.0
+offset_right = -11.0
+offset_bottom = 23.0
+grow_horizontal = 0
+
+[node name="BossKillsLabel" type="Label" parent="UI" unique_id=849017518]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -48.0
+offset_top = 54.0
+offset_right = -8.0
+offset_bottom = 77.0
+grow_horizontal = 0
+
+[node name="TimerLabel" type="Label" parent="UI" unique_id=132208201]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -46.0
+offset_top = 74.0
+offset_right = -6.0
+offset_bottom = 97.0
+grow_horizontal = 0
+
+[node name="WinLabel" type="Label" parent="UI" unique_id=2135245716]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -43.0
+offset_top = 136.0
+offset_right = -3.0
+offset_bottom = 159.0
+grow_horizontal = 0
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=457023480]
+stream = ExtResource("19_ac4mc")
+autoplay = true
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1358010691]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=1064554810]
+position = Vector2(616, 757)
+shape = SubResource("RectangleShape2D_ac4mc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=548721992]
+position = Vector2(-530.125, -755)
+shape = SubResource("RectangleShape2D_oxu42")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=1177929408]
+position = Vector2(1106, -1510)
+shape = SubResource("RectangleShape2D_ac4mc")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls" unique_id=1741363487]
+position = Vector2(555.5, -757.25)
+shape = SubResource("RectangleShape2D_4dr2m")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls" unique_id=302774430]
+position = Vector2(-993.5, -381.5)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_ac4mc")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Walls" unique_id=1591319375]
+position = Vector2(-993, 456)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_6kgpb")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Walls" unique_id=625471705]
+position = Vector2(999, -411.75)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_dsxya")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Walls" unique_id=1254568663]
+position = Vector2(1002, 410.875)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_si8y1")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Walls" unique_id=1584991063]
+position = Vector2(-450.125, 760)
+shape = SubResource("RectangleShape2D_vucxa")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dlej4erf1gv1x"]
+
+[ext_resource type="Script" uid="uid://cavh88ux4xjlr" path="res://barrel.gd" id="1_a12vh"]
+[ext_resource type="Texture2D" uid="uid://co6g5526pjdq6" path="res://asset/PNG/Default size/barrelBlack_side.png" id="1_n8un1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a12vh"]
+size = Vector2(20, 28)
+
+[node name="Barrel" type="Area2D" unique_id=165176579]
+script = ExtResource("1_a12vh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=242761914]
+shape = SubResource("RectangleShape2D_a12vh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1663978166]
+texture = ExtResource("1_n8un1")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=178769106]

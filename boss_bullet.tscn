@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bkbvh0j2ejyl8"]
+
+[ext_resource type="Script" uid="uid://c61mxp3ujrp1y" path="res://boss_bullet.gd" id="1_rcspk"]
+[ext_resource type="Texture2D" uid="uid://bbeva4mv6a2sp" path="res://asset/PNG/Default size/barrelBlack_top.png" id="2_rcspk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rcspk"]
+radius = 13.0
+
+[node name="BossBullet" type="Area2D" unique_id=1246465568]
+script = ExtResource("1_rcspk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1593083077]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+texture = ExtResource("2_rcspk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=723213640]
+modulate = Color(0.7446596, 0.25123498, 0, 1)
+shape = SubResource("CircleShape2D_rcspk")
